@@ -18,10 +18,15 @@ from django.urls import include,path
 
 #import Rest Framework
 from rest_framework import routers
-from accounts.views import UserViewSet
+
+# import app viewset
+from department.views import DepartmentViewSet
+
+router = routers.DefaultRouter()
+router.register("departments", DepartmentViewSet, basename='department')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
-    path('api/v1/account/', include('employees.urls')),
+    #path('api/v1/account/', include('employees.urls')),
 ]
