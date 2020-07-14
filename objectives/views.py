@@ -10,6 +10,14 @@ from rest_framework.response import Response
 from .models import Objective, Keyresult
 from .serializers import ObjectiveCreateSerializer, KeyresultCreateSerializer, ObjectiveSerializer
 
+class ObjectiveAPIView(APIView):
+
+    def get(self, request):
+        objective = Objective.objects.all()
+        serializer = ObjectiveSerializer(objective, many=True)
+        return Response(serializer.data)
+
+
 class ObjectiveCreateAPIView(APIView):
 
     def post(self, request):

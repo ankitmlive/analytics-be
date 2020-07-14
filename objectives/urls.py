@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
 
     #objectives
+    path('objectives/', views.ObjectiveAPIView.as_view(), name='all-objective'),
     path('objectives/create/', views.ObjectiveCreateAPIView.as_view(), name='add-objective'),
     path('objectives/<int:pk>/', views.ObjectiveDetailAPIView.as_view(), name='objective-detail'),
 
