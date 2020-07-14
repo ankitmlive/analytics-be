@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Department
-from employees.serializers import TeamSerializer
+from teams.serializers import TeamSerializer
 
 #--> Department Serializer
 class DepartmentSerializer(serializers.ModelSerializer):

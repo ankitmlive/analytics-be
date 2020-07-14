@@ -1,15 +1,20 @@
 from django.db import models
 from django.conf import settings
+from department.models import Department
+from employees.models import Employee
 
 class Team(models.Model):
-    """
-    This table will belongs to department of various loactions
-    """
-    team_lead = models.CharField(max_length=150, blank=False,)
-    department = models.DateField(null=False)
-    average_pay = models.CharField(max_length=80, blank=False,)
-    created_at  = models.DateTimeField(auto_now_add=True)
-    updated_at  = models.DateTimeField(auto_now=True)
+    lead = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name="team_lead")
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name="teams")
+    average_pay = models.CharField(max_length=200, blank=False)
+    created_at      = models.DateTimeField(auto_now_add=True)
+    updated_at      = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        ordering = ('-created_at',)
+    @property
+    def name(self):
+        return "%s's Team" % (self.lead)
+    
+class TeamEmployee(models.Model):
+    employee = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name="team")
+    team = models.OneToOneField(Team, on_delete=models.CASCADE, related_name="employee")
+
