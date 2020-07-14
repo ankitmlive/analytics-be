@@ -12,17 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Department',
+            name='Employee',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=80)),
-                ('location', models.CharField(max_length=150)),
-                ('date_of_innaugration', models.DateField()),
+                ('firstname', models.CharField(blank=True, max_length=50, verbose_name='full name')),
+                ('lastname', models.CharField(blank=True, max_length=50, verbose_name='last name')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
-            options={
-                'ordering': ('-created_at',),
-            },
         ),
     ]
