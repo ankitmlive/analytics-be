@@ -20,10 +20,13 @@ A Team Lead can also be a employee of other team(not a lead)
 
 ##### http://127.0.0.1:8000/api/v1/analytics/
 
+http://127.0.0.1:8000/api/v1/employees/ GET to all employees
+http://127.0.0.1:8000/api/v1/employees/ POST to new employee
+
 
 ## Department api
 ### GET :
-##### http://127.0.0.1:8000/api/v1/departments/
+ http://127.0.0.1:8000/api/v1/departments/ to all departments
 ### POST :
-##### http://127.0.0.1:8000/api/v1/departments/
+http://127.0.0.1:8000/api/v1/departments/ to new department
 

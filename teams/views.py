@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import TeamSerializer
+from .serializers import TeamSerializer, TeamEmployeeSerializer
 from .models import Team
 
 from django.shortcuts import get_object_or_404
@@ -32,3 +32,13 @@ class TeamCreateAPIView(APIView):
 
 class TeamDetailAPIView(APIView):
     pass
+
+class AddTeamAPIView(APIView):
+    def post(self, request):
+        response = {}
+        serializer = TeamEmployeeSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            response["info"] = "user addded in team successfully"
+            return Response(response, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

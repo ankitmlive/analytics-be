@@ -14,7 +14,9 @@ class Team(models.Model):
     def name(self):
         return "%s's Team" % (self.lead)
     
-class TeamEmployee(models.Model):
+class EmployeeInTeam(models.Model):
     employee = models.OneToOneField(Employee, on_delete=models.CASCADE, related_name="team")
-    team = models.OneToOneField(Team, on_delete=models.CASCADE, related_name="employee")
+    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name="employee")
+    created_at      = models.DateTimeField(auto_now_add=True)
+    updated_at      = models.DateTimeField(auto_now=True)
 

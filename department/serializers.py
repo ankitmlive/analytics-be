@@ -4,7 +4,7 @@ from teams.serializers import TeamSerializer
 
 #--> Department Serializer
 class DepartmentSerializer(serializers.ModelSerializer):
-    team = TeamSerializer(source='teams', many=True,)
+    team = TeamSerializer(source='teams', many=True, read_only=True)
     class Meta:
         model = Department
         fields = ('pk', 'name', 'location', 'date_of_innaugration', 'team')
