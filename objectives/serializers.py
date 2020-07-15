@@ -17,7 +17,6 @@ class KeyresultCreateSerializer(serializers.ModelSerializer):
 
 class ObjectiveSerializer(serializers.ModelSerializer):
     result = KeyresultCreateSerializer(source='keyresults', many=True,)
-
     class Meta:
         model = Objective
         fields = ('id', 'text', 'result')
