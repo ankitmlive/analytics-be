@@ -10,6 +10,5 @@ urlpatterns = [
 
     #keyresults
     path('key/create/', views.KeyCreateAPIView.as_view(), name='add-key'),
-    path('key/<int:pk>/', views.KeyDetailAPIView.as_view(), name='key-detail'),
 
 ]

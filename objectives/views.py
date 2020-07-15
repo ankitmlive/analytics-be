@@ -11,15 +11,12 @@ from .models import Objective, Keyresult
 from .serializers import ObjectiveCreateSerializer, KeyresultCreateSerializer, ObjectiveSerializer
 
 class ObjectiveAPIView(APIView):
-
     def get(self, request):
         objective = Objective.objects.all()
         serializer = ObjectiveSerializer(objective, many=True)
         return Response(serializer.data)
 
-
 class ObjectiveCreateAPIView(APIView):
-
     def post(self, request):
         response = {}
         serializer = ObjectiveCreateSerializer(data=request.data)
@@ -30,7 +27,6 @@ class ObjectiveCreateAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ObjectiveDetailAPIView(APIView):
-
     def get_object(self, pk):
         try:
             return Objective.objects.get(pk=pk)
@@ -43,7 +39,6 @@ class ObjectiveDetailAPIView(APIView):
         return Response(serializer.data)
 
 class KeyCreateAPIView(APIView):
-
     def post(self, request):
         response = {}
         serializer = KeyresultCreateSerializer(data=request.data)
@@ -52,16 +47,3 @@ class KeyCreateAPIView(APIView):
             response["info"] = "keyresult added successfully"
             return Response(response, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class KeyDetailAPIView(APIView):
-
-    def get_object(self, pk):
-        try:
-            return Keyresult.objects.get(pk=pk)
-        except Keyresult.DoesNotExist:
-            raise Http404
-
-    def get(self, request, pk, format=None):
-        keyresult = self.get_object(pk)
-        serializer = KeyresultCreateSerializer(objective)
-        return Response(serializer.data)
