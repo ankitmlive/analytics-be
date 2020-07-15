@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-
 from employees.models import Employee
 
 class Objective(models.Model):
@@ -14,9 +13,6 @@ class Objective(models.Model):
 
     class Meta:
         ordering = ('created_at',)
-    
-    def __str__(self):
-        return '%d: %s' % (self.order, self.text)
 
 class Keyresult(models.Model):
     """

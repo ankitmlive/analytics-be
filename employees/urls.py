@@ -8,4 +8,7 @@ urlpatterns = [
     path('create/', views.TeamCreateAPIView.as_view(), name='add-team'),
     path('<int:pk>/', views.TeamDetailAPIView.as_view(), name='team-detail'),
 
+    #add employee to team
+    path('add-member/', views.AddMemberAPIView.as_view(), name='add-team'),
+
 ]
