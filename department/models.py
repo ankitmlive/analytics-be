@@ -17,4 +17,14 @@ class Department(models.Model):
     
     @property
     def employee_count(self):
-        return self.teams.all().count()
+        obj = 0
+        for team in self.teams.all():
+            obj += team.employee_count
+        return obj
+
+    @property
+    def objective_count(self):
+        obj = 0
+        for team in self.teams.all():
+            obj += team.objective_count
+        return obj
