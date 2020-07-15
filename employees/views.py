@@ -20,15 +20,20 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
 
-# list the team
+
 class TeamAPIView(APIView):
+    """
+    A viewset for list the team.
+    """
     def get(self, request):
         team = Team.objects.all()
         serializer = TeamSerializer(team, many=True)
         return Response(serializer.data)
 
-#create team
 class TeamCreateAPIView(APIView):
+    """
+    A viewset for creating the team.
+    """
     def post(self, request):
         response = {}
         serializer = TeamSerializer(data=request.data)
@@ -40,10 +45,16 @@ class TeamCreateAPIView(APIView):
 
 
 class TeamDetailAPIView(APIView):
+    """
+    A viewset for detailed view of the team.
+    out of scope for this assessment
+    """
     pass
 
-# add members
 class AddMemberAPIView(APIView):
+    """
+    A viewset for adding new members to the team.
+    """
     def post(self, request):
         response = {}
         serializer = MemberSerializer(data=request.data)

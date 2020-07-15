@@ -4,7 +4,7 @@ from employees.models import Employee
 
 class Objective(models.Model):
     """
-    This table will belongs to department of various loactions
+    This table will hold all the objective of app
     """
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name="objectives")
     text = models.CharField(max_length=150, blank=False,)
@@ -25,5 +25,5 @@ class Keyresult(models.Model):
     updated_at  = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ('-created_at',)
+        ordering = ('created_at',)
 
