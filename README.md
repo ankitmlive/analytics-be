@@ -28,6 +28,7 @@ A Team Lead can also be a employee of other team(not a lead)
 ## Department api
     http://127.0.0.1:8000/api/v1/departments/ to all departments
     http://127.0.0.1:8000/api/v1/departments/ to new department
+    http://127.0.0.1:8000/api/v1/departments/department-id/ for viewing detail and team of department
 
 ## Objective Api
     http://127.0.0.1:8000/api/v1/objectives/create/ for creating new objective
