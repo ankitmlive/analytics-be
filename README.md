@@ -82,6 +82,9 @@ For Objective & KeyResult Model Schema, Go to :
 ## Api's for UI explantion
 
 1 - Use Home Api to fullfill the api requirement of first image card UI, where all objectives will be shown with status
-2 - When click on (objectives on track) card we will fetch all departments with 1st api of Department api, It will return all the department object with employee and objective count to show colored status and pop-up window on department cards.
-3 - When click on any department card we will fetch the department details using 3rd api of department api's, which will return all the child teams in department with team lead. It will fullfill second pirtures requirements.
+
+2 - When click on (objectives on track) card we will fetch all departments with 1st api of Department api, It will return all the department 
+object with employee and objective count to show colored status and pop-up window on department cards.
+
+3 - When click on any department card we will fetch the department details using 3rd api of department api's, which will return all the child   teams in department with team lead. It will fullfill second pirtures requirements.
 
