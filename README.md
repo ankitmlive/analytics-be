@@ -1,15 +1,15 @@
 # analytics-be
 BetterWorks Analytics assessment Repo
 
-It's a scalable project structure, that's why created different app for different features.
-Department & Employees are unique entity in app.
-Each department can have multiple teams with unique Team Leads.
-Team leads are the employees that can be the employee for other Teams.
-An Employee can belongs to only one team or multiple team (based on requirements so not applied contraints yet)
-A Team Lead can be a Lead only for one Team
-A Team Lead can also be a employee of other team (not a lead)
-An objective is direclty belongs to employee
-A key is a status for an objective
+##### It's a scalable project structure, that's why created different app for different features.
+##### Department & Employees are unique entity in app.
+##### Each department can have multiple teams with unique Team Leads.
+##### Team leads are the employees that can be the employee for other Teams.
+##### An Employee can belongs to only one team or multiple team (based on requirements so not applied contraints yet)
+##### A Team Lead can be a Lead only for one Team
+##### A Team Lead can also be a employee of other team (not a lead)
+##### An objective is direclty belongs to employee
+##### A key is a status for an objective
 
 ### Installation 
 
@@ -49,19 +49,19 @@ A key is a status for an objective
     1 - http://127.0.0.1:8000/api/v1/key/create/ --> POST Method to new key
 
 ## Model Schema
-I have used Django ORM to achieve DB goals.
-To achieve the assessment goal and depending on my understanding with the assessment and also keeping django(python) specification standard i have created these Models :
+##### I have used Django ORM to achieve DB goals.
+##### To achieve the assessment goal and depending on my understanding with the assessment and also keeping django(python) specification standard, i have created these Models :
     Employee Model
     Department Model
     Team Model
     Member Model
     Objective Model
     KeyResult Model
-For Employee, Team & Member Model Schema. Go To :
+#### For Employee, Team & Member Model Schema. Go To :
     https://github.com/ankitmlive/analytics-be/blob/master/employees/models.py
-For Department Model Schema, Go to :
+#### For Department Model Schema, Go to :
     https://github.com/ankitmlive/analytics-be/blob/master/department/models.py
-For Objective & KeyResult Model Schema, Go to :
+#### For Objective & KeyResult Model Schema, Go to :
     https://github.com/ankitmlive/analytics-be/blob/master/objectives/models.py
 
 #### Model Features :
