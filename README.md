@@ -1,8 +1,19 @@
 # analytics-be
 BetterWorks Analytics assessment Repo
 
-I am creating it as a scalable project structure, that's why created different app for different features:
+### Installation 
+1 - Make sure python3.3+ is installed on the host system
+2 - Python 3.3+ comes with virtualenv if not install it (can be avoided if host machine have python3.3+)
+3 - Git clone https://github.com/ankitmlive/analytics-be.git
+4 - cd analytics-be
+5 - python3 -m venv env
+6 - source env/bin/activate
+7 - pip install -r requirements.txt
 
+### Start the Server
+python manage.py runserver
+
+I am creating it as a scalable project structure, that's why created different app for different features:
 Department & Employees are unique entity in app
 each department can have multiple teams with unique Team Leads
 
@@ -16,7 +27,7 @@ A Team Lead can also be a employee of other team(not a lead)
 
 
 ## Url's
-#### Acording to UI i am assuming that the mentioned page is homepage and all the objectives will be listed on the first render, so i will fetch all the current objectives on app with "pending" & "Complete" status. The First API will be :
+Acording to UI i am assuming that the mentioned page is homepage and all the objectives will be listed on the first render, so i will fetch all the current objectives on app with "pending" & "Complete" status. The First API will be :
 
 ## Home Api
     http://127.0.0.1:8000/api/v1/analytics/
