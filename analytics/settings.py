@@ -83,7 +83,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    # added by ankit mishra
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'db name',
+    #     'USER': 'user name',
+    #     'PASSWORD': 'password',
+    #     'HOST': 'host',
+    #     'PORT': '5432',
+    # },
 }
 
 
