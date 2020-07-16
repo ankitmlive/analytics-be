@@ -3,19 +3,13 @@ BetterWorks Analytics assessment Repo
 
 ### Installation 
 
-1 - Make sure python3.3+ is installed on the host system
-
-2 - Python 3.3+ comes with virtualenv if not install it (can be avoided if host machine have python3.3+)
-
-3 -     Git clone https://github.com/ankitmlive/analytics-be.git
-
-4 -     cd analytics-be
-
-5 -     python3 -m venv env
-
-6 -     source env/bin/activate
-
-7 -     pip install -r requirements.txt
+    1 - Make sure python3.3+ is installed on the host system
+    2 - Python 3.3+ comes with virtualenv if not install it (can be avoided if host machine have python3.3+)
+    3 - git clone https://github.com/ankitmlive/analytics-be.git
+    4 - cd analytics-be
+    5 - python3 -m venv env
+    6 - source env/bin/activate
+    7 - pip install -r requirements.txt
 
 ### Start the Server
 
