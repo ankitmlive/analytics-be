@@ -1,15 +1,15 @@
 # analytics-be
 BetterWorks Analytics assessment Repo
 
-##### It's a scalable project structure, that's why created different app for different features.
-##### Department & Employees are unique entity in app.
-##### Each department can have multiple teams with unique Team Leads.
-##### Team leads are the employees that can be the employee for other Teams.
-##### An Employee can belongs to only one team or multiple team (based on requirements so not applied contraints yet)
-##### A Team Lead can be a Lead only for one Team
-##### A Team Lead can also be a employee of other team (not a lead)
-##### An objective is direclty belongs to employee
-##### A key is a status for an objective
+    It's a scalable project structure, that's why created different app for different features.
+    Department & Employees are unique entity in app.
+    Each department can have multiple teams with unique Team Leads.
+    Team leads are the employees that can be the employee for other Teams.
+    An Employee can belongs to only one team or multiple team (based on requirements so not applied contraints yet)
+    A Team Lead can be a Lead only for one Team
+    A Team Lead can also be a employee of other team (not a lead)
+    An objective is direclty belongs to employee
+    A key is a status for an objective
 
 ### Installation 
 
@@ -86,5 +86,5 @@ BetterWorks Analytics assessment Repo
 #### 3 - When click on any department card we will fetch the department details using 3rd api of department api's, which will return all the child   teams in department with team lead. It will fullfill second pirtures requirements.
 
 ## Database
-##### For Development & Testing Purpose , Django comes with a lightweight & convenient SQLite Database, which makes life easier for testing purpose, in this repo i have pushed a .sqlite file with dummy data that will make it easy to test this app, however i have implemneted PostgreSQL setting in project setting, it will reruire "psycopg2" library on host.
-##### To connect with PostgreSQL goto analytics->settings->DATABASES and switch the default code and also provide DB SERVER Details.
+##### For Development & Testing Purpose , Django comes with a lightweight & convenient SQLite Database, which makes life easier for testing purpose, in this repo i have pushed a .sqlite file with dummy data that will make it easy to test this app, however i have implemented PostgreSQL setting in project setting, it will require "psycopg2" library on host.
+##### To connect with PostgreSQL goto analytics->settings->DATABASES and switch the default section and also provide DB SERVER Details.
