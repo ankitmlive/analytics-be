@@ -85,3 +85,6 @@ BetterWorks Analytics assessment Repo
 #### 2 - When click on (objectives on track) card we will fetch all departments with 1st api of Department api, It will return all the department object with employee and objective count to show colored status and pop-up window on department cards.
 #### 3 - When click on any department card we will fetch the department details using 3rd api of department api's, which will return all the child   teams in department with team lead. It will fullfill second pirtures requirements.
 
+## Database
+##### For Development & Testing Purpose , Django comes with a lightweight & convenient SQLite Database, which makes life easier for testing purpose, in this repo i have pushed a .sqlite file with dummy data that will make it easy to test this app, however i have implemneted PostgreSQL setting in project setting, it will reruire "psycopg2" library on host.
+##### To connect with PostgreSQL goto analytics->settings->DATABASES and switch the default code and also provide DB SERVER Details.
